@@ -32,6 +32,8 @@ navicon2.element.addEventListener('pointerdown', () => {
     //navicon3.element.style.visibility = 'hidden';
     scene.add(panorama1);
     panorama1.add(navicon1.main)
+    navicon2.reset_size();
+    navicon3.reset_size();
 
 })
 

@@ -33,4 +33,9 @@ export class create_icon {
 
     }
 
+    reset_size():void{
+      this.element.height = 5;
+      this.element.width = 5;
+    }
+
 };

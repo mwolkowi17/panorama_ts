@@ -27,6 +27,7 @@ navicon1.element.addEventListener('pointerdown', () => {
     scene.add(panorama2);
     panorama2.add(navicon2.main);
     panorama2.add(navicon3.main);
+    navicon1.reset_size();
 
 })
 

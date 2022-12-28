@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { create_icon } from './navigation_icon';
 import { scene } from './client';
-import { panorama2 } from './panorama2';
+import { panorama2,navicon2,navicon3 } from './panorama2';
 import { panorama_form } from './panorama_create';
 
 // const geometry = new THREE.SphereGeometry(500, 60, 40);
@@ -13,14 +13,17 @@ import { panorama_form } from './panorama_create';
 
 export const panorama3 = new panorama_form('./kawiarnia4.png').main;
 
-const navicon1 = new create_icon(14, -18, 30,'nav4');
+const navicon4 = new create_icon(14, -18, 30,'nav4');
 
-panorama3.add(navicon1.main)
+panorama3.add(navicon4.main)
 
-navicon1.element.addEventListener('pointerdown', () => {
+navicon4.element.addEventListener('pointerdown', () => {
+    panorama3.remove(navicon4.main);
     scene.remove(panorama3);
-    navicon1.element.style.visibility = 'hidden';
+    //navicon4.element.style.visibility = 'hidden';
     scene.add(panorama2);
+    panorama2.add(navicon2.main);
+    panorama2.add(navicon3.main);
     
 
 })
