@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { create_icon } from './navigation_icon';
 import { scene } from './client';
 import { panorama1,navicon1 } from './panorama1';
-import { panorama3 } from './panorama3';
+import { panorama3,navicon4 } from './panorama3';
 import { panorama_form } from './panorama_create';
 
 
@@ -38,10 +38,15 @@ navicon2.element.addEventListener('pointerdown', () => {
 })
 
 navicon3.element.addEventListener('pointerdown', () => {
+    panorama2.remove(navicon2.main);
+    panorama2.remove(navicon3.main);
     scene.remove(panorama2);
-    navicon2.element.style.visibility = 'hidden';
-    navicon3.element.style.visibility = 'hidden';
+    //navicon2.element.style.visibility = 'hidden';
+    //navicon3.element.style.visibility = 'hidden';
     scene.add(panorama3);
+    panorama3.add(navicon4.main);
+    navicon2.reset_size();
+    navicon3.reset_size();
 
 })
 

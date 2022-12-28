@@ -13,7 +13,7 @@ import { panorama_form } from './panorama_create';
 
 export const panorama3 = new panorama_form('./kawiarnia4.png').main;
 
-const navicon4 = new create_icon(14, -18, 30,'nav4');
+export const navicon4 = new create_icon(14, -18, 30,'nav4');
 
 panorama3.add(navicon4.main)
 
@@ -24,6 +24,7 @@ navicon4.element.addEventListener('pointerdown', () => {
     scene.add(panorama2);
     panorama2.add(navicon2.main);
     panorama2.add(navicon3.main);
+    navicon4.reset_size();
     
 
 })
