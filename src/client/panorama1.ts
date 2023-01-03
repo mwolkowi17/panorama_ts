@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 import { create_icon } from './navigation_icon';
+import { create_info_icon } from './info_icon';
+import { invoDiv } from './info_div';
 import { panorama2,navicon2,navicon3 } from './panorama2';
 import { scene } from './client';
 import { panorama_form } from './panorama_create';
@@ -29,6 +31,14 @@ navicon1.element.addEventListener('pointerdown', () => {
     panorama2.add(navicon3.main);
     navicon1.reset_size();
 
+})
+
+export  const infoicon1 = new create_info_icon(-30, 0, 30,'imageInfo1')
+panorama1.add(infoicon1.main);
+
+infoicon1.element.addEventListener('pointerdown',()=>{
+console.log('pointer clicked');
+const infodiv1 = new invoDiv();
 })
 
 
