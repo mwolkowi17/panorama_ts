@@ -20,6 +20,7 @@ navicon1.element.addEventListener('pointerdown', () => {
     panorama2.add(navicon2.main);
     panorama2.add(navicon3.main);
     navicon1.reset_size();
+    panorama1.remove(infoicon1.main);
 
 })
 

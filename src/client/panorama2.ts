@@ -4,6 +4,7 @@ import { scene } from './client';
 import { panorama1,navicon1 } from './panorama1';
 import { panorama3,navicon4 } from './panorama3';
 import { panorama_form } from './panorama_create';
+import { infoicon1 } from './panorama1';
 
 
 
@@ -32,6 +33,7 @@ navicon2.element.addEventListener('pointerdown', () => {
     //navicon3.element.style.visibility = 'hidden';
     scene.add(panorama1);
     panorama1.add(navicon1.main)
+    panorama1.add(infoicon1.main)
     navicon2.reset_size();
     navicon3.reset_size();
 
