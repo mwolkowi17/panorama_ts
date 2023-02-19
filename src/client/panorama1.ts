@@ -6,6 +6,7 @@ import { panorama2,navicon2,navicon3 } from './panorama2';
 import { scene } from './client';
 import { panorama_form } from './panorama_create';
 
+
 export const panorama1 = new panorama_form('./index.png').main;
 
 export const navicon1 = new create_icon(-12, -18, -30,'nav1');
@@ -29,7 +30,8 @@ panorama1.add(infoicon1.main);
 
 infoicon1.element.addEventListener('pointerdown',()=>{
 console.log('pointer clicked');
-const infodiv1 = new invoDiv();
+//const infodiv1 = new invoDiv();
+
 })
 
 
