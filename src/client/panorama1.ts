@@ -11,7 +11,10 @@ export const panorama1 = new panorama_form('./index.png').main;
 
 export const navicon1 = new create_icon(-12, -18, -30,'nav1');
 
-panorama1.add(navicon1.main);
+
+setTimeout(() => {
+    panorama1.add(navicon1.main);
+  }, 1000)
 
 navicon1.element.addEventListener('pointerdown', () => {
     panorama1.remove(navicon1.main)
@@ -26,11 +29,17 @@ navicon1.element.addEventListener('pointerdown', () => {
 })
 
 export  const infoicon1 = new create_info_icon(-30, 0, 30,'imageInfo1')
-panorama1.add(infoicon1.main);
+
+setTimeout(() => {
+    panorama1.add(infoicon1.main);
+  }, 1000)
+
 
 infoicon1.element.addEventListener('pointerdown',()=>{
 console.log('pointer clicked');
-//const infodiv1 = new invoDiv();
+const infodiv1 = new invoDiv();
+document.body.appendChild(infodiv1.main)
+infodiv1.main.style.visibility = 'visible';
 
 })
 

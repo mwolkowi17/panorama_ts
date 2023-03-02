@@ -6,7 +6,7 @@ export class invoDiv {
 
     constructor() {
         this.main = document.createElement('div');
-        console.log(this.main);
+        //console.log(this.main);
 
         this.main.className = 'display';
         this.main.id = 'display1';
@@ -18,6 +18,7 @@ export class invoDiv {
         this.main.style.fontSize = "30px";
         this.main.style.textAlign = "center";
         this.main.style.lineHeight = "1.8";
+      
 
         const offButton = document.createElement('div')
         offButton.className = 'offButton'
