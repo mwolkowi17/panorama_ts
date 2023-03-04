@@ -26,13 +26,6 @@ document.body.appendChild( labelRenderer.domElement );
 
 new OrbitControls(camera, labelRenderer.domElement)
 
-// const geometry = new THREE.BoxGeometry()
-// const material = new THREE.MeshBasicMaterial({
-//     color: 0x00ff00,
-//     wireframe: true,
-// })
-
-// const cube = new THREE.Mesh(geometry, material)
 scene.add(panorama1)
 
 window.addEventListener('resize', onWindowResize, false)
@@ -45,9 +38,6 @@ function onWindowResize() {
 
 function animate() {
     requestAnimationFrame(animate)
-
-    //cube.rotation.x += 0.01
-    //cube.rotation.y += 0.01
 
     render()
     renderer.render(scene, camera);

@@ -41,6 +41,11 @@ const infodiv1 = new invoDiv();
 document.body.appendChild(infodiv1.main)
 infodiv1.main.style.visibility = 'visible';
 
+infodiv1.offButton.addEventListener("click", function () {
+
+  infodiv1.main.style.visibility = 'hidden';
+})
+
 })
 
 
