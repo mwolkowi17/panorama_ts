@@ -40,10 +40,12 @@ console.log('pointer clicked');
 const infodiv1 = new invoDiv();
 document.body.appendChild(infodiv1.main)
 infodiv1.main.style.visibility = 'visible';
+infoicon1.element.style.visibility='hidden';
 
 infodiv1.offButton.addEventListener("click", function () {
 
   infodiv1.main.style.visibility = 'hidden';
+  infoicon1.element.style.visibility='visible';
 })
 
 })
