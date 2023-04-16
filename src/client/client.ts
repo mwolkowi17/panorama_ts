@@ -24,7 +24,8 @@ labelRenderer.domElement.style.position = 'absolute';
 labelRenderer.domElement.style.top = '0px';
 document.body.appendChild( labelRenderer.domElement );
 
-new OrbitControls(camera, labelRenderer.domElement)
+const controls = new OrbitControls(camera, labelRenderer.domElement)
+controls.enableDamping=true;
 
 scene.add(panorama1)
 
@@ -42,6 +43,7 @@ function animate() {
     render()
     renderer.render(scene, camera);
     labelRenderer.render(scene, camera);
+    controls.update();
 }
 
 function render() {

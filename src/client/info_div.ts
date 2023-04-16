@@ -27,6 +27,8 @@ export class invoDiv {
 
         this.offButton = document.createElement('div')
         this.offButton.className = 'offButton'
+        this.offButton.style.cursor='pointer'
+        this.offButton.style.color='green'
         this.offButton.textContent = '[close details]'
 
 
